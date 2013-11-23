@@ -22,12 +22,12 @@
 
 #include "xbmc/xbmc_audiodec_dll.h"
 #include "xbmc/AEChannelData.h"
+#include <mad.h>
 
 ADDON::CHelper_libXBMC_addon *XBMC           = NULL;
 
 extern "C" {
 
-#include <mad.h>
 #include <math.h>
   
 #define BYTES2INT(b1,b2,b3,b4) (((b1 & 0xFF) << (3*8)) | \
