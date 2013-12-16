@@ -15,4 +15,6 @@ include_directories(${XBMC_INCLUDE_DIR}
 
 set(MAD_SOURCES src/MP3Codec.cpp)
 
+set(DEPLIBS ${MAD_LIBRARIES})
+
 build_addon(audiodecoder.mad MAD DEPLIBS)

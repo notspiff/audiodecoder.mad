@@ -231,6 +231,10 @@ struct MADContext
     readRetries = 0;
     Decoding = CallAgainWithSameBuffer = false;
     fTotalDuration = 0;
+    InputBufferPos = 0;
+    OutputBufferPos = 0;
+    memset(&mxhouse, 0, sizeof(madx_house));
+    memset(&mxstat, 0, sizeof(madx_stat));
   }
 
   void SetOffsets(int iSeekOffsets, const float* offsets)
@@ -1109,9 +1113,9 @@ bool DeInit(void* context)
 {
   MADContext* ctx = (MADContext*)context;
   XBMC->CloseFile(ctx->file);
-  mad_synth_finish(&ctx->mxhouse->synth);
-  mad_frame_finish(&ctx->mxhouse->frame);
-  mad_stream_finish(&mxhouse->stream);
+  mad_synth_finish(&ctx->mxhouse.synth);
+  mad_frame_finish(&ctx->mxhouse.frame);
+  mad_stream_finish(&ctx->mxhouse.stream);
   delete ctx;
 
   return true;

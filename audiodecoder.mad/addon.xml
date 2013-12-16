@@ -9,12 +9,13 @@
   </requires>
   <extension
     point="xbmc.audiodecoder"
-    name="mp3"
-    extension=".mp3"
+    name="mad"
+    extension=".mp3|.mp2"
+    mimetypes="audio/mpeg|audio/mpeg3|audio/mp3"
     library_linux="audiodecoder.mad.so"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">MAD Audio Decoder</summary>
-    <description lang="en">MAD (Mp3) Audio Decoder</description>
+    <description lang="en">MAD (MP2/MP3) Audio Decoder</description>
     <platform>all</platform>
   </extension>
 </addon>
