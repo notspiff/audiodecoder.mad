@@ -5,10 +5,10 @@
   name="MAD Audio Decoder"
   provider-name="spiff">
   <requires>
-    <import addon="xbmc.audiodecoder" version="1.0.0"/>
+    <import addon="kodi.audiodecoder" version="1.0.0"/>
   </requires>
   <extension
-    point="xbmc.audiodecoder"
+    point="kodi.audiodecoder"
     name="mad"
     extension=".mp3|.mp2"
     mimetypes="audio/mpeg|audio/mpeg3|audio/mp3"
