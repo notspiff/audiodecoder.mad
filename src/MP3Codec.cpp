@@ -18,10 +18,10 @@
  *
  */
 
-#include "kodi/libXBMC_addon.h"
+#include "libXBMC_addon.h"
 
-#include "kodi/kodi_audiodec_dll.h"
-#include "kodi/AEChannelData.h"
+#include "kodi_audiodec_dll.h"
+#include "AEChannelData.h"
 #include <mad.h>
 
 ADDON::CHelper_libXBMC_addon *XBMC           = NULL;
